@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#fdf8fb" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#1b1824" media="(prefers-color-scheme: dark)">
+  <title>Purposive Communication Midterm Quiz</title>
+  <meta name="description" content="A midterm review quiz for Purposive Communication. Choose a topic, answer every question, and check your score.">
+  <link rel="canonical" href="https://purposive-communication.vercel.app/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://purposive-communication.vercel.app/">
+  <meta property="og:title" content="Purposive Communication Midterm Quiz">
+  <meta property="og:description" content="Choose a topic, answer every question, and check your score.">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;0,9..144,800;1,9..144,500;1,9..144,700;1,9..144,800&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;1,500&display=swap">
+  <link rel="stylesheet" href="styles.css">
+  <script type="module" src="app.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Purposive <em>Communication</em></h1>
+    <p>Midterm review quiz. Answers appear only after you submit.</p>
+  </header>
+
+  <main>
+    <noscript><p>This quiz needs JavaScript. Please enable it and reload the page.</p></noscript>
+
+    <section id="picker" aria-labelledby="pick-title">
+      <h2 id="pick-title" tabindex="-1">Choose a topic</h2>
+      <ul class="topics" id="topic-list"></ul>
+    </section>
+
+    <section id="quiz-view" aria-labelledby="quiz-title" hidden>
+      <h2 id="quiz-title" tabindex="-1"></h2>
+
+      <div class="bar">
+        <div class="meter" id="meter" role="progressbar" aria-label="Questions answered" aria-valuemin="0" aria-valuemax="1" aria-valuenow="0"><span></span></div>
+        <output id="count" form="quiz">0/0</output>
+      </div>
+
+      <div id="result" class="score" role="status" hidden></div>
+
+      <form id="quiz" aria-label="Quiz questions" novalidate></form>
+
+      <div class="actions">
+        <button class="btn" type="submit" form="quiz" id="submit">Submit answers</button>
+        <button class="btn ghost" type="button" id="retry" hidden>Retry</button>
+        <button class="btn ghost" type="button" id="back">All topics</button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>Choose a topic, answer every question, then check your score.</p>
+  </footer>
+</body>
+</html>
